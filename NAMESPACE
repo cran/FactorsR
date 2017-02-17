@@ -1,0 +1,14 @@
+
+#functions
+
+exportPattern(Factors)
+
+importFrom(grDevices, jpeg, dev.off, dev.new)
+
+importFrom(utils, write.table, write.csv2, read.csv2, write.csv,  read.csv)
+
+importFrom(graphics, par, hist, rect, barplot, plot, polygon, axis, image, mtext, pairs, abline, points)
+
+importFrom(stats, na.exclude, quantile, IQR, lm, residuals, sd, step)
+
+
