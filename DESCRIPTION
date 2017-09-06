@@ -1,5 +1,5 @@
 Package: FactorsR
-Version: 1.1
+Version: 1.2
 Title: Identification of the Factors Affecting Species Richness
 Author: Cástor Guisande González
 Maintainer: Cástor Guisande González <castor@uvigo.es>
@@ -10,6 +10,6 @@ Depends: R (>= 3.0.0)
 Suggests: plotrix, relaimpo, nortest, lmtest, car, kernlab, usdm,
         hier.part
 NeedsCompilation: no
-Packaged: 2017-02-17 12:31:45 UTC; castor
+Packaged: 2017-09-06 11:48:41 UTC; castor
 Repository: CRAN
-Date/Publication: 2017-02-17 14:37:59
+Date/Publication: 2017-09-06 12:21:07 UTC
