@@ -116,15 +116,18 @@ affected.}
 \details{
 The file required in the argument \emph{data} may be obtained using ModestR (available at the web site www.ipez.es/ModestR), as it is shown in the following screenshot (Export/Export maps of the select branch/To RWizard Applications/To FactorsR).
 \tabular{c}{
-\figure{F1}{options: width=4.5in}
+\if{html}{\figure{F1.jpg}{options: width=4.5in}}
+\if{latex}{\figure{F1.jpg}{options: width=4.5in}}
 }
 The menu shown in the following screenshot is obtained, where it is possible to select one or several biogeographical indexes (Rarity index, AOO index, etc.) and one or several environmental variables, in addition to species richness.
 \tabular{c}{
-\figure{F2}{options: width=5.2in}
+\if{html}{\figure{F2.jpg}{options: width=5.2in}}
+\if{latex}{\figure{F2.jpg}{options: width=5.2in}}
 }
 The format of the CSV file obtained is shown in the following screenshot, and this CSV file is the one required in this argument.
 \tabular{c}{
-\figure{F3}{options: width=4in}
+\if{html}{\figure{F3.jpg}{options: width=4in}}
+\if{latex}{\figure{F3.jpg}{options: width=4in}}
 }
 If the argument \emph{Area = "World"} (default) the entire world is plotted in the maps of the residuals, actual richness and predicted richness.
 
@@ -132,7 +135,8 @@ Clicking on the icon world, as it is shown in the following screenshot, would di
 
 If the arguments \emph{minLon}, \emph{maxLon}, \emph{minLat} and \emph{maxLat} are not specified, they are calculated automatically based on the countries and/or regions selected. The latitude and longitude of the map may be delimited, by just specifying the arguments \emph{minLon}, \emph{maxLon}, \emph{minLat} and \emph{maxLat}.
 \tabular{c}{
-\figure{F9}{options: width=5in}
+\if{html}{\figure{F9.jpg}{options: width=5in}}
+\if{latex}{\figure{F9.jpg}{options: width=5in}}
 }
 In the function four different methods for selecting uncorrelated variables can be chosen. If "vif" is selected, a pop-up window comes out where variables with VIF above threshold indicated by the user in the argument \emph{threshold} are reported, and the user decides which variables are removed. The advantage of the manual method is that the user decides which variables to delete from the correlated pairs.
 
@@ -179,30 +183,38 @@ In the script the argument \emph{indlog=TRUE}, so the logarithm of all independe
 
 The first table of the following screenshot shows VIF values higher than 12 and, therefore, there is multicollinearity among the independent variables, which is logical for this to happen because there is the same variable transformed and untransformed, for instance <<Temperature>> and <<LNTemperature>>. The second table shows the contribution of the variables to the model estimated by using hierarchical partitioning. As the script uses the default option \emph{vifmethod="hier.part"}, the auto-correlated variables (variables with VIF values higher than the threshold) are removed following the criteria of selecting the variable with higher contribution to the model between two auto-correlated variables. The third table shows the variables selected, which are not auto-correlated.
 \tabular{c}{
-\figure{R1-1}{options: width=2.7in}
-\figure{R1-2}{options: width=2.2in}
+\if{html}{\figure{R1-1.jpg}{options: width=2.7in}}
+\if{html}{\figure{R1-2.jpg}{options: width=2.2in}}
+\if{latex}{\figure{R1-1.jpg}{options: width=2.7in}}
+\if{latex}{\figure{R1-2.jpg}{options: width=2.2in}}
 }
 The multiple regression shows that sea surface temperature, nitrate, salinity, depth and AOO index explained 66.8\% of the variance observed in species richness of sharks. The following figures show the contribution of all variables to the model and the contribution of the variables selected once those auto-correlated variables have been removed. The contribution is estimated by using hierarchical partitioning. Temperature was the variable with a higher contribution to the variance observed in the species richness of sharks.
 \tabular{cc}{
-\figure{F3-1}{options: width=4.5in}
+\if{html}{\figure{F3-1.jpg}{options: width=4.5in}}
+\if{latex}{\figure{F3-1.jpg}{options: width=4.5in}}
 \cr
-\figure{F3-2}{options: width=4.5in}
+\if{html}{\figure{F3-2.jpg}{options: width=4.5in}}
+\if{latex}{\figure{F3-2.jpg}{options: width=4.5in}}
 }
 The following figure shows the matrix of scatterplots among the dependent variable (Species richness) and the dependent variables selected in the stepwise regression (in this case all the independent variables used for the analysis).
 \tabular{c}{
-\figure{F4}{options: width=3.8in}
+\if{html}{\figure{F4.jpg}{options: width=3.8in}}
+\if{latex}{\figure{F4.jpg}{options: width=3.8in}}
 }
 The following map shows the species richness of sharks around the world with a raster of 60´ x 60´.
 \tabular{c}{
-\figure{F6}{options: width=5.4in}
+\if{html}{\figure{F6.jpg}{options: width=5.4in}}
+\if{latex}{\figure{F6.jpg}{options: width=5.4in}}
 }
 The following map shows the species richness of sharks around the world with a raster of 60´ x 60´ predicted by SVM model. The coefficient of determination of the model performed with SVM showed that the variables used in the model explained the 96.7\% of the variance observed in the species richness of sharks.
 \tabular{c}{
-\figure{F7}{options: width=5.4in}
+\if{html}{\figure{F7.jpg}{options: width=5.4in}}
+\if{latex}{\figure{F7.jpg}{options: width=5.4in}}
 }
 Residuals of the SVM model around the world in cells of 60´x 60´ are shown in the following map. Negative residuals of the SVM model may be a potential indicator of areas with undiscovered and/or unregistered species, or areas with lower species richness due to the negative effect of anthropogenic factors. See Guisande et al. (2013) for further details about this example.
 \tabular{c}{
-\figure{F8}{options: width=5.4in}
+\if{html}{\figure{F8.jpg}{options: width=5.4in}}
+\if{latex}{\figure{F8.jpg}{options: width=5.4in}}
 }
 }
 \value{A TXT file is obtained with the VIF values of all variables, the VIF of the selected variables after removing those with colinearity, the VIF of the variables that are finally in the regression model, the normality test, homogeneity of variances and homoscedasticity and the regression model. A matrix of scatterplots, a plot with the relative contribution of the independent variables estimated by using hierarchical partitioning and a plot with the relative contribution of the independent variables in the multiple regression if the argument \emph{CoVa=TRUE}. Also maps of the residuals obtained from the SVM and, actual richness and richness predicted by the SVM model.}

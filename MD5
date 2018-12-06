@@ -1,11 +1,11 @@
-f600f5adb9f2b34baecb6ef4ac56b1b8 *DESCRIPTION
+6ae5da172aba14bcb8399deee196ff0f *DESCRIPTION
 73ab67da91b48955dbb1e20ae7261a1f *NAMESPACE
 de8c99ffa6ca352fc20139c40a462ea7 *R/Factors.R
-0a34c96f99f49a319b457d099a92fbff *data/Sharks.RData
-b9e6d1ae2b7f923d0cb516d231fd391b *data/adworld.RData
+140b3355669c34cc195d2eb5aa9e0918 *data/Sharks.RData
+83ef7d041c5650bac89cba79359f3434 *data/adworld.RData
 eb1ac3381a5b9ee4c5b990b3bb1bb9e2 *data/datalist
 b6d5b16d6ed95d5f40f12a3730957045 *inst/CITATION
-a32f85dc4191d6d3e1ff5e1ff6f010fd *man/Factors.Rd
+a980f99a1773e41ae62a80ee3e0eb908 *man/Factors.Rd
 1452b1da51a059b530165e69de7fdc77 *man/Sharks.Rd
 157c325f3d1d49ac5e02a7837f1d23d4 *man/adworld.Rd
 da0b6363424ef124e1c0a366e67e637b *man/figures/F1.jpg
