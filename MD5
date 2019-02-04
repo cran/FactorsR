@@ -1,8 +1,8 @@
-6ae5da172aba14bcb8399deee196ff0f *DESCRIPTION
+70e1c3740e64052e21215f10ff04ad96 *DESCRIPTION
 73ab67da91b48955dbb1e20ae7261a1f *NAMESPACE
 de8c99ffa6ca352fc20139c40a462ea7 *R/Factors.R
 140b3355669c34cc195d2eb5aa9e0918 *data/Sharks.RData
-83ef7d041c5650bac89cba79359f3434 *data/adworld.RData
+327d4b377f3a0edd1981eb3352d709a7 *data/adworld.RData
 eb1ac3381a5b9ee4c5b990b3bb1bb9e2 *data/datalist
 b6d5b16d6ed95d5f40f12a3730957045 *inst/CITATION
 a980f99a1773e41ae62a80ee3e0eb908 *man/Factors.Rd
