@@ -7,11 +7,10 @@ citEntry(entry = "Article",
   year         = "2015",
   volume       = "7",
     pages        = "385--396",
-  url          = "http://dx.doi.org/10.3390/d7040385",
-
+  url          = "https://www.mdpi.com/1424-2818/7/4/385",
   textVersion  =
   paste("Guisande, C., Heine, J., García-Roselló, E., González-Dacosta, J., Pérez-Costa, E., García Pérez-Schofield, B., González Vilas, L., Vaamonde, A. & Lobo, J.M. (2015).",
         "An RWizard application for identifying the most likely causal factors in controlling species richness.",
         "Diversity, 7(4): 385-396.",
-        "URL http://dx.doi.org/10.3390/d7040385")
+        "URL https://www.mdpi.com/1424-2818/7/4/385")
 )

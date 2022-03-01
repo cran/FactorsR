@@ -2,7 +2,7 @@
 \name{Factors}
 \alias{Factors}
 \title{Identification of the factors affecting species richness}
-\description{This function provides tools for the identification of most likely causal factors significantly correlated with species richness by following these steps: 1) quantifying the severity of multicollinearity among the factors, 2) estimating the contribution of factors to species richness by using hierarchical partitioning, 3) selecting the factors with higher contribution among auto-correlated factors and finally, 4) among all factors selected in the previous steps, selecting those factors significantly correlated with species richness using a stepwise multiple regression. Predictions and residuals of a support vector machine (SVM) model performed with the factors selected are shown on a map. Negative residuals may be potential areas with undiscovered and/or unregistered species, or areas with decreased species richness due to the negative effect of anthropogenic factors. This function uses an output file of ModestR (www.ipez.es/ModestR) with data of richness of the species and environmental variables in a cell size defined by the user.
+\description{This function provides tools for the identification of most likely causal factors significantly correlated with species richness by following these steps: 1) quantifying the severity of multicollinearity among the factors, 2) estimating the contribution of factors to species richness by using hierarchical partitioning, 3) selecting the factors with higher contribution among auto-correlated factors and finally, 4) among all factors selected in the previous steps, selecting those factors significantly correlated with species richness using a stepwise multiple regression. Predictions and residuals of a support vector machine (SVM) model performed with the factors selected are shown on a map. Negative residuals may be potential areas with undiscovered and/or unregistered species, or areas with decreased species richness due to the negative effect of anthropogenic factors. This function uses an output file of ModestR with data of richness of the species and environmental variables in a cell size defined by the user.
 }
 \usage{
 Factors(data, varY, varX, Area="World", outliers=FALSE, quant1=0.05, quant2 = 0.95,
@@ -114,19 +114,19 @@ affected.}
   \item{row.names}{CSV file. Either a logical value indicating whether the row names of x are to be written along with x, or a character vector of row names to be written.}
 }
 \details{
-The file required in the argument \emph{data} may be obtained using ModestR (available at the web site www.ipez.es/ModestR), as it is shown in the following screenshot (Export/Export maps of the select branch/To RWizard Applications/To FactorsR).
+The file required in the argument \emph{data} may be obtained using ModestR, as it is shown in the following screenshot (Export/Export maps of the select branch/To RWizard Applications/To FactorsR).
 \tabular{c}{
-\if{html}{\figure{F1.jpg}{options: width=4.5in}}
+\if{html}{\figure{F1.jpg}{options: width="50"}}
 \if{latex}{\figure{F1.jpg}{options: width=4.5in}}
 }
 The menu shown in the following screenshot is obtained, where it is possible to select one or several biogeographical indexes (Rarity index, AOO index, etc.) and one or several environmental variables, in addition to species richness.
 \tabular{c}{
-\if{html}{\figure{F2.jpg}{options: width=5.2in}}
+\if{html}{\figure{F2.jpg}{options: width="50"}}
 \if{latex}{\figure{F2.jpg}{options: width=5.2in}}
 }
 The format of the CSV file obtained is shown in the following screenshot, and this CSV file is the one required in this argument.
 \tabular{c}{
-\if{html}{\figure{F3.jpg}{options: width=4in}}
+\if{html}{\figure{F3.jpg}{options: width="50"}}
 \if{latex}{\figure{F3.jpg}{options: width=4in}}
 }
 If the argument \emph{Area = "World"} (default) the entire world is plotted in the maps of the residuals, actual richness and predicted richness.
@@ -135,7 +135,7 @@ Clicking on the icon world, as it is shown in the following screenshot, would di
 
 If the arguments \emph{minLon}, \emph{maxLon}, \emph{minLat} and \emph{maxLat} are not specified, they are calculated automatically based on the countries and/or regions selected. The latitude and longitude of the map may be delimited, by just specifying the arguments \emph{minLon}, \emph{maxLon}, \emph{minLat} and \emph{maxLat}.
 \tabular{c}{
-\if{html}{\figure{F9.jpg}{options: width=5in}}
+\if{html}{\figure{F9.jpg}{options: width="50"}}
 \if{latex}{\figure{F9.jpg}{options: width=5in}}
 }
 In the function four different methods for selecting uncorrelated variables can be chosen. If "vif" is selected, a pop-up window comes out where variables with VIF above threshold indicated by the user in the argument \emph{threshold} are reported, and the user decides which variables are removed. The advantage of the manual method is that the user decides which variables to delete from the correlated pairs.
@@ -183,37 +183,37 @@ In the script the argument \emph{indlog=TRUE}, so the logarithm of all independe
 
 The first table of the following screenshot shows VIF values higher than 12 and, therefore, there is multicollinearity among the independent variables, which is logical for this to happen because there is the same variable transformed and untransformed, for instance <<Temperature>> and <<LNTemperature>>. The second table shows the contribution of the variables to the model estimated by using hierarchical partitioning. As the script uses the default option \emph{vifmethod="hier.part"}, the auto-correlated variables (variables with VIF values higher than the threshold) are removed following the criteria of selecting the variable with higher contribution to the model between two auto-correlated variables. The third table shows the variables selected, which are not auto-correlated.
 \tabular{c}{
-\if{html}{\figure{R1-1.jpg}{options: width=2.7in}}
-\if{html}{\figure{R1-2.jpg}{options: width=2.2in}}
+\if{html}{\figure{R1-1.jpg}{options: width="50"}}
+\if{html}{\figure{R1-2.jpg}{options: width="50"}}
 \if{latex}{\figure{R1-1.jpg}{options: width=2.7in}}
 \if{latex}{\figure{R1-2.jpg}{options: width=2.2in}}
 }
 The multiple regression shows that sea surface temperature, nitrate, salinity, depth and AOO index explained 66.8\% of the variance observed in species richness of sharks. The following figures show the contribution of all variables to the model and the contribution of the variables selected once those auto-correlated variables have been removed. The contribution is estimated by using hierarchical partitioning. Temperature was the variable with a higher contribution to the variance observed in the species richness of sharks.
 \tabular{cc}{
-\if{html}{\figure{F3-1.jpg}{options: width=4.5in}}
+\if{html}{\figure{F3-1.jpg}{options: width="50"}}
 \if{latex}{\figure{F3-1.jpg}{options: width=4.5in}}
 \cr
-\if{html}{\figure{F3-2.jpg}{options: width=4.5in}}
+\if{html}{\figure{F3-2.jpg}{options: width="50"}}
 \if{latex}{\figure{F3-2.jpg}{options: width=4.5in}}
 }
 The following figure shows the matrix of scatterplots among the dependent variable (Species richness) and the dependent variables selected in the stepwise regression (in this case all the independent variables used for the analysis).
 \tabular{c}{
-\if{html}{\figure{F4.jpg}{options: width=3.8in}}
+\if{html}{\figure{F4.jpg}{options: width="50"}}
 \if{latex}{\figure{F4.jpg}{options: width=3.8in}}
 }
 The following map shows the species richness of sharks around the world with a raster of 60´ x 60´.
 \tabular{c}{
-\if{html}{\figure{F6.jpg}{options: width=5.4in}}
+\if{html}{\figure{F6.jpg}{options: width="50"}}
 \if{latex}{\figure{F6.jpg}{options: width=5.4in}}
 }
 The following map shows the species richness of sharks around the world with a raster of 60´ x 60´ predicted by SVM model. The coefficient of determination of the model performed with SVM showed that the variables used in the model explained the 96.7\% of the variance observed in the species richness of sharks.
 \tabular{c}{
-\if{html}{\figure{F7.jpg}{options: width=5.4in}}
+\if{html}{\figure{F7.jpg}{options: width="50"}}
 \if{latex}{\figure{F7.jpg}{options: width=5.4in}}
 }
 Residuals of the SVM model around the world in cells of 60´x 60´ are shown in the following map. Negative residuals of the SVM model may be a potential indicator of areas with undiscovered and/or unregistered species, or areas with lower species richness due to the negative effect of anthropogenic factors. See Guisande et al. (2013) for further details about this example.
 \tabular{c}{
-\if{html}{\figure{F8.jpg}{options: width=5.4in}}
+\if{html}{\figure{F8.jpg}{options: width="50"}}
 \if{latex}{\figure{F8.jpg}{options: width=5.4in}}
 }
 }
@@ -223,35 +223,35 @@ Durbin, J. & Watson G.S. (1951) Testing for serial correlation in least squares 
 
 Fox, J. & Weisberg, S. (2011) \emph{An R Companion to Applied Regression}. Second Edition, Sage.
 
-Fox, J., Weisberg, S., Adler, D., Bates, D., Baud-Bovy, G., Ellison, S., Firth, D., Friendly. M., Gorjanc, G., Graves, S., Heiberger, R., Laboissiere, R., Monette, G., Murdoch, D., Nilsson, H., Ogle, D., Ripley, B., Venables, W. & Zeileis, A. (2013) Companion to Applied Regression. R package version 2.0-21. Available at: http://CRAN.R-project.org/package=car.
+Fox, J., Weisberg, S., Adler, D., Bates, D., Baud-Bovy, G., Ellison, S., Firth, D., Friendly. M., Gorjanc, G., Graves, S., Heiberger, R., Laboissiere, R., Monette, G., Murdoch, D., Nilsson, H., Ogle, D., Ripley, B., Venables, W. & Zeileis, A. (2013) Companion to Applied Regression. R package version 2.0-21. Available at: https://CRAN.R-project.org/package=car.
 
 García-Roselló, E., Guisande, C., González-Dacosta, J., Heine, J., Pelayo-Villamil, P., Manjarrés-Hernández, A., Vaamonde, A. & Granado-Lorencio, C. (2013) ModestR: a software tool for managing and analyzing species distribution map databases. \emph{Ecography}, 36: 1202-1207.
 
 Groemping, U. (2006) Relative Importance for Linear Regression in R: The Package relaimpo. \emph{Journal of Statistical Software}, 17: 1-27.
 
-Grömping, U. (2014)Relative importance of regressors in linear models. R package version 2.2-2. Available at: http://CRAN.R-project.org/package=relaimpo.
+Grömping, U. (2014)Relative importance of regressors in linear models. R package version 2.2-2. Available at: https://CRAN.R-project.org/package=relaimpo.
 
-Grosjean, P. (2014) SciViews GUI API - Main package. R package version 0.9-5. Available at: http://CRAN.R-project.org/package=SciViews.
+Grosjean, P. (2014) SciViews GUI API - Main package. R package version 0.9-5. Available at: https://CRAN.R-project.org/package=SciViews.
 
-Gross, J. (2014) Tests for Normality. R package version 1.0-2. Available at: http://CRAN.R-project.org/package=nortest.
+Gross, J. (2014) Tests for Normality. R package version 1.0-2. Available at: https://CRAN.R-project.org/package=nortest.
 
 Guisande, C., Patti, B., Vaamonde, A., Manjarrés-Hernández, A., Pelayo-Villamil, P., García-Roselló, E.,  González-Dacosta, J., Heine, J. & Granado-Lorencio, C. (2013) Factors affecting species richness of marine elasmobranchs. \emph{Biodiversity and Conservation}, 22: 1703-1714.
 
-Hothorn, T. et al., (2014) Testing Linear Regression Models R package version 0.9-33. Available at: http://CRAN.R-project.org/package=lmtest.
+Hothorn, T. et al., (2014) Testing Linear Regression Models R package version 0.9-33. Available at: https://CRAN.R-project.org/package=lmtest.
 
 Karatzoglou, A., Smola, A., Hornik, K. & Zeileis, A.  (2004). kernlab - An S4 Package for Kernel Methods in R. \emph{Journal of Statistical Software}, 11: 1-20.
 
-Karatzoglou, A. (2014) Kernel-based Machine Learning Lab. R package version 0.9-19. Available at: http://CRAN.R-project.org/package=kernlab.
+Karatzoglou, A. (2014) Kernel-based Machine Learning Lab. R package version 0.9-19. Available at: https://CRAN.R-project.org/package=kernlab.
 
-Lemon, J., Bolker, B., Oom, S., Klein, E., Rowlingson, B., Wickham, H., Tyagi, A., Eterradossi, O., Grothendieck, G., Toews, M., Kane, J., Turner, R., Witthoft, C., Stander, J., Petzoldt, T., Duursma, R., Biancotto, E., Levy, O., Dutang, C., Solymos, P., Engelmann, R., Hecker, M., Steinbeck, F., Borchers, H., Singmann, H., Toal, T. & Ogle, D. (2014). Various plotting functions. R package version 3.5-7. Available at: http://CRAN.R-project.org/package=plotrix.
+Lemon, J., Bolker, B., Oom, S., Klein, E., Rowlingson, B., Wickham, H., Tyagi, A., Eterradossi, O., Grothendieck, G., Toews, M., Kane, J., Turner, R., Witthoft, C., Stander, J., Petzoldt, T., Duursma, R., Biancotto, E., Levy, O., Dutang, C., Solymos, P., Engelmann, R., Hecker, M., Steinbeck, F., Borchers, H., Singmann, H., Toal, T. & Ogle, D. (2014). Various plotting functions. R package version 3.5-7. Available at: https://CRAN.R-project.org/package=plotrix.
 
-Naimi, B. (2014) Uncertainty analysis for species distribution models. R package version 3.5-0. Available at: http://CRAN.R-project.org/package=usdm.
+Naimi, B. (2014) Uncertainty analysis for species distribution models. R package version 3.5-0. Available at: https://CRAN.R-project.org/package=usdm.
 
 Naimi, B., Hamm, N.A.S., Groen, T.A., Skidmore, A.K., & Toxopeus, A.G. (2014) Where is positional uncertainty a problem for species distribution modelling? \emph{Ecography}, 37: 191-203.
 
 Tyberghein L, Verbruggen H, Pauly K, Troupin C, Mineur F, de Clerck O (2012) Bio-ORACLE: a global environmental dataset for marine species distribution modelling. \emph{Global Ecology and Biogeography}, 21: 272-281.
 
-Walsh, C. & Mac Nally, R. (2014) Hierarchical Partitioning. R package version 1.0-4. Available at: http://CRAN.R-project.org/package=hier.part.
+Walsh, C. & Mac Nally, R. (2014) Hierarchical Partitioning. R package version 1.0-4. Available at: https://CRAN.R-project.org/package=hier.part.
 }
 
 \examples{
